@@ -1,3 +1,8 @@
+using HrSystem.Domain;
+using HrSystem.Domain.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace HrSystem.API
 {
     public class Program
@@ -8,6 +13,17 @@ namespace HrSystem.API
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //add AddDbContext
+            builder.Services.AddDbContext<HRDbContext>(
+           options => options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection")));
+            // add Identity
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>();
+            builder.Services.AddIdentity<Hr, IdentityRole>(opt =>
+            {
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ ";
+            }).AddEntityFrameworkStores<HRDbContext>();
+
 
             var app = builder.Build();
 
