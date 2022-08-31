@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace HrSystem.Domain.Models
 {
+    [Table("Employees", Schema = "HR")]
     public class Employee
     {
         public int Id { get; set; }
@@ -16,7 +17,7 @@ namespace HrSystem.Domain.Models
         public string Email { get; set; }
         public string ContactNumber { get; set; }
         [DataType(DataType.Time)]
-
+        [Display(Name = "Start Date")]
         public TimeSpan Start { get; set; }
         [DataType(DataType.Time)]
 

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrSystem.API", "HrSystem.API\HrSystem.API.csproj", "{683FFDBE-D73F-447C-906D-2D757375B0C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrSystem", "HrSystem.API\HrSystem.csproj", "{683FFDBE-D73F-447C-906D-2D757375B0C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrSystem.Domain", "HrSystem.Domain\HrSystem.Domain.csproj", "{FDC61819-078A-497F-9138-7FF803436715}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrSystem.Domain", "HrSystem.Domain\HrSystem.Domain.csproj", "{FDC61819-078A-497F-9138-7FF803436715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
