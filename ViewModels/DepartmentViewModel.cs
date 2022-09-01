@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HRSystem.ViewModels
+namespace ViewModels
 {
     public class DepartmentViewModel
     {

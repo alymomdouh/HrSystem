@@ -1,4 +1,4 @@
-﻿namespace HRSystem.ViewModels
+﻿namespace ViewModels
 {
     public class WeeklyHolidayViewModel
     {

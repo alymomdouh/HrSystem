@@ -2,6 +2,8 @@ using HrSystem.Domain;
 using HrSystem.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Services.IServices.Account;
+using Services.Services.Account;
 
 namespace HrSystem.API
 {
@@ -24,6 +26,8 @@ namespace HrSystem.API
                 opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ ";
             }).AddEntityFrameworkStores<HRDbContext>();
 
+            // inject Services
+            builder.Services.AddScoped<IAccountService, AccountService>();
 
             var app = builder.Build();
 

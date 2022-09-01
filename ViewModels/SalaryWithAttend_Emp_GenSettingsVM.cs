@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HRSystem.ViewModels
+namespace ViewModels
 {
     // Creating ViewModel To Set Specific Data from Employee ,  Attendance and General Settings
     public class SalaryWithAttend_Emp_GenSettingsVM

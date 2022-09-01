@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HRSystem.ViewModels
+namespace ViewModels
 {
     public class RegisterViewModel
     {
@@ -16,13 +16,13 @@ namespace HRSystem.ViewModels
         public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [MinLength(8)]
-        [RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", ErrorMessage = "Password must contain 8 or more characters and at least one number, and one uppercase and lowercase letter")]
+        //[MinLength(8)]
+        //[RegularExpression(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", ErrorMessage = "Password must contain 8 or more characters and at least one number, and one uppercase and lowercase letter")]
         //[RegularExpression(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$",ErrorMessage ="week password")]
         public string Password { get; set; }
         [Required]
-        [DataType(DataType.Password)]
-        [MinLength(8)]
+        //[DataType(DataType.Password)]
+        //[MinLength(8)]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
         [Required]
